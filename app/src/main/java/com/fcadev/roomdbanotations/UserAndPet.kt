@@ -7,13 +7,15 @@ import androidx.room.Relation
 
 @Entity
 data class User(
-    @PrimaryKey val userId: Int,
+    @PrimaryKey(autoGenerate = true)
+    val userId: Int,
     val name: String
 )
 
 @Entity
 data class Pet(
-    @PrimaryKey val petId: Int,
+    @PrimaryKey(autoGenerate = true)
+    val petId: Int,
     val ownerId: Int,
     val name: String
 )
